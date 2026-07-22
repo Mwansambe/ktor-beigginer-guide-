@@ -1,0 +1,56 @@
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+2026-07-22 20:52:50.579 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2026-07-22 20:52:51.251 [main] INFO  Application - Application started in 0.718 seconds.
+Exception in thread "main" java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:577)
+	at java.base/sun.nio.ch.ServerSocketCh2026-07-22 20:53:02.023 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [habits]
+/, segment:0 -> SUCCESS @ /
+  /badge, segment:0 -> FAILURE "Selector didn't match" @ /badge
+  /habits, segment:1 -> SUCCESS @ /habits
+    /habits/(method:GET), segment:1 -> SUCCESS @ /habits/(method:GET)
+    /habits/{id}, segment:1 -> FAILURE "Selector didn't match" @ /habits/{id}
+    /habits/(method:POST), segment:1 -> FAILURE "Selector didn't match" @ /habits/(method:POST)
+Matched routes:
+  "" -> "habits" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /habits/(method:GET)
+2026-07-22 20:53:02.142 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [habits]
+/, segment:0 -> SUCCESS @ /
+  /badge, segment:0 -> FAILURE "Selector didn't match" @ /badge
+  /habits, segment:1 -> SUCCESS @ /habits
+    /habits/(method:GET), segment:1 -> FAILURE "Selector didn't match" @ /habits/(method:GET)
+    /habits/{id}, segment:1 -> FAILURE "Selector didn't match" @ /habits/{id}
+    /habits/(method:POST), segment:1 -> SUCCESS @ /habits/(method:POST)
+Matched routes:
+  "" -> "habits" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /habits/(method:POST)
+2026-07-22 20:53:02.157 [eventLoopGroupProxy-4-2] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.habittracker.Habit, reifiedType=class com.example.habittracker.Habit, kotlinType=com.example.habittracker.Habit) for call /habits
+2026-07-22 20:53:02.195 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping because body is already converted.
+ failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command '/usr/lib/jvm/java-21-openjdk-amd64/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 8s
+4 actionable tasks: 2 executed, 2 up-to-date
